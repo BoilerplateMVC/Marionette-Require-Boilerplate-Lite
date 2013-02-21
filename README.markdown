@@ -112,7 +112,7 @@ MobileController.js
 
 DesktopController.js
 --------------------
-   DesktopController.js is almost identical to MobileController, except that instead of showing a `MobileHeaderView` in the `headerRegion`, we rather predictably show a `DesktopHeaderView`.  Again, note that this parallel DesktopController/MobileController is just one way that an application could handle the differences between a mobile and desktop version of an application.  There are many, many other ways this could be done, so don't let this get in your way if it's not exactly what you're after.
+   DesktopController.js is almost identical to MobileController, except that instead of showing a `MobileHeaderView` in the `headerRegion`, we rather predictably show a `HeaderView`.  Again, note that this parallel DesktopController/MobileController is just one way that an application could handle the differences between a mobile and desktop version of an application.  There are many, many other ways this could be done, so don't let this get in your way if it's not exactly what you're after.
 
 
 WelcomeView.js
@@ -123,16 +123,16 @@ WelcomeView.js
 
    Backbone.js View's have a one-to-one relationship with DOM elements, and a View's DOM element is listed in the `el` property, or is created as a simple `div` if none is specified.  The jQuery-wrapped DOM element is then available as `$el`.  The View's `model` is set to a new instance of Model.js, listed above as a dependency.  
 
-   Marionette.ItemView is an extension of the base Backbone.View, but contains some basic logic for rendering and tearing down the view.  If a View's `template` attribute is set to a template function created by an engine like Handlebars or Underscore, ItemView's `render` method will automatically render the View's `$el` for you.  Of course you are also free to write your own simple `render` method.  Our `DesktopHeaderView` is a good example of the simplest of possible views:
+   Marionette.ItemView is an extension of the base Backbone.View, but contains some basic logic for rendering and tearing down the view.  If a View's `template` attribute is set to a template function created by an engine like Handlebars or Underscore, ItemView's `render` method will automatically render the View's `$el` for you.  Of course you are also free to write your own simple `render` method.  Our `HeaderView` is a good example of the simplest of possible views:
 
-define(['underscore', 'jquery', 'handlebars', 'text!templates/desktopHeader.html'],
+define(['underscore', 'jquery', 'handlebars', 'text!templates/header.html'],
     function (_, $, Handlebars, template) {
         return Backbone.Marionette.ItemView.extend({
             template:Handlebars.compile(template)
         });
     });
 
-Here we use the `text` plugin to load desktopHeader.html in as a template string, and then compile it into a function with Handlebars.  There are handy plugins out there which condense this step for you.  For Handlebars, consider using the [require-handlebars-plugin](https://github.com/SlexAxton/require-handlebars-plugin).  For Underscore, consider [require-tpl](https://github.com/ZeeAgency/requirejs-tpl).
+Here we use the `text` plugin to load header.html in as a template string, and then compile it into a function with Handlebars.  There are handy plugins out there which condense this step for you.  For Handlebars, consider using the [require-handlebars-plugin](https://github.com/SlexAxton/require-handlebars-plugin).  For Underscore, consider [require-tpl](https://github.com/ZeeAgency/requirejs-tpl).
 
    Next you will find an `events` object.  This is where all of your View DOM event handlers associated with the HTML element referenced by your View's `el` property should be stored.  Keep in mind that Backbone is using the jQuery `delegate` method, so it expects a selector that is within your View's `el` property.  I did not include any events by default, so you will have to fill those in yourself.  Below is an example of having an events object with one event handler that calls a View's `someMethod()` method when an element with a class name of _someElement_ is clicked.
 
