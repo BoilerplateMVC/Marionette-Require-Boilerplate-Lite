@@ -1,13 +1,13 @@
 // Jasmine Unit Testing Suite
-define(["jquery", "backbone", "marionette", "models/Model", "collections/Collection", "app/App", "jqueryui", "bootstrap", "backbone.validateAll", "jasminejquery"],
+define(["jquery", "backbone", "marionette", "App", "models/Model", "collections/Collection", "app/App", "jqueryui", "bootstrap", "backbone.validateAll", "jasminejquery"],
 
-    function($, Backbone, Marionette, Model, Collection ) {
+    function($, Backbone, Marionette, App, Model, Collection ) {
 
         // Test suite that includes all of the Jasmine unit tests   
-        describe("Marionette-Require-Boilerplate (MRB)", function() {
+        describe("MRB-lite", function() {
 
             // Backbone View Suite: contains all tests related to views
-            describe("Desktop Marionette App instantiation", function() {
+            describe("Marionette App instantiation", function() {
                 //Initialize App in Desktop Mode (App is global var)
                 App.start();
                 it("App should start and have Regions", function() {
@@ -17,7 +17,7 @@ define(["jquery", "backbone", "marionette", "models/Model", "collections/Collect
 
             }); // End of the View test suite
 
-            describe("Marionette Views", function() {
+            /*describe("Marionette Views", function() {
                 it("App Regions should contain views", function() {
                     //App.appRouter will be instantiated, and views will get created, but asynchronously.
                     //Wait for it...
@@ -69,7 +69,7 @@ define(["jquery", "backbone", "marionette", "models/Model", "collections/Collect
                 expect(this.collection.length).toEqual(0);
             });
 
-        }); // End of the Collection test suite
+        }); // End of the Collection test suite*/
     }); // End of the BRB test suite
 
 });
