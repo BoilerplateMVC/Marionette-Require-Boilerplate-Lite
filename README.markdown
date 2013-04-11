@@ -19,9 +19,13 @@ A Lightweight boilerplate project based off [Marionette-Require-Boilerplate](htt
 
 index.html
 ----------
-    Include Require.js via script tag, specifying your application init file via the `data-main` attribute.
+    _Development Mode_
+    Include Require.js via script tag, specifying your application init file `Init.js` via the `data-main` attribute, and `app.css` as your CSS file.
 
-AppInit.js
+    _Production Mode_
+    Include `Init.min.js` in your script tag, and `app.min.css` as your CSS file.
+
+Init.js
 -------------
    Configure Require.js, starting with the paths.  Setting paths allow you to define an alias name and file path for any file that you like.
 
