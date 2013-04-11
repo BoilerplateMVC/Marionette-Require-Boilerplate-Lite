@@ -3,7 +3,7 @@ MRB-Lite (Marionette Require Boilerplate)
 ![Example](http://sidnet.info/sites/default/files/marionette-logo.png)   ![Example](http://3.bp.blogspot.com/-JFOJ-k6tLnA/TsiKgBYPvqI/AAAAAAAAAT8/dGXeu0LeuTE/s320/backbone-js-logo.png) ![Example](http://requirejs.org/i/logo.png)
 
 #Description
-A Lightweight boilerplate project based off [Marionette-Require-Boilerplate](https://github.com/brettjonesdev/Marionette-Require-Boilerplate), providing a simple Marionette application built with Require.js.
+A Lightweight boilerplate project based off [Marionette-Require-Boilerplate](https://github.com/brettjonesdev/Marionette-Require-Boilerplate), providing a simple Marionette application built with Require.js.  Part of the [BoilerplateMVC](https://github.com/BoilerplateMVC) suite.
 
 #What's different from Marionette-Require-Boilerplate?
    This project eschews the mobile/desktop dichotomy, instead providing a single application Init file, and falling back on the App.mobile flag to differentiate behavior between environments.  This makes it faster to get up and running. It also does not include jQueryUI and jQueryMobile, relying on bootstrap's responsive nature instead.  
@@ -12,11 +12,14 @@ A Lightweight boilerplate project based off [Marionette-Require-Boilerplate](htt
    1. Download and install [Node.js](http://nodejs.org/#download)
    2. Clone this repository
    3. On the command line, type `npm install nodemon -g` to install the [nodemon](https://github.com/remy/nodemon) library globally.  If it complains about user permissions type `sudo npm install nodemon -g`.
-   3. On the command line, navigate to inside of the **Marionette-Require-Boilerplate** folder and type `npm install`
-   4. Next, type `nodemon` (this will start your Node.js web server and restart the server any time you make a file change thanks to the wonderful  library)
-   5. To view the demo page, go to `http://localhost:8001`
-   6. To view the Jasmine test suite page, go to `http://localhost:8001/specRunner.html`
-   7. Enjoy using Marionette, Backbone, Require, Lodash, jQuery, jQueryUI, Twitter Bootstrap, and Handlebars
+   4.  If you have installed [Grunt](http://gruntjs.com/) globally in the past, you will need to remove it first by typing `npm uninstall -g grunt`.  If it complains about user permissions, type `sudo npm uninstall -g grunt`.
+   5.  Next, install the latest version of [Grunt](http://gruntjs.com/) by typing `npm install -g grunt-cli`.  If it complains about user permissions, type `sudo npm install -g grunt-cli`. 
+   6. Navigate to inside of the **Backbone-Require-Boilerplate** folder and type `npm install`
+   7. Next, type `nodemon` (this will start your Node.js web server and restart the server any time you make a file change thanks to the wonderful **nodemon** library)
+   8. To view the demo page, go to `http://localhost:8001`
+   9. To view the Jasmine test suite page, go to `http://localhost:8001/specRunner.html`
+   10. Type `grunt` to run your grunt build and create minified .js and .css files
+   11. Enjoy using Marionette, Backbone, Require, Grunt, Lodash, jQuery,Twitter Bootstrap, and Handlebars!
 
 #Tour of the Boilerplate Files
 
