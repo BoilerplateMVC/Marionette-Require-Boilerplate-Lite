@@ -3,7 +3,7 @@ MRB-Lite (Marionette Require Boilerplate)
 ![Example](http://sidnet.info/sites/default/files/marionette-logo.png)   ![Example](http://3.bp.blogspot.com/-JFOJ-k6tLnA/TsiKgBYPvqI/AAAAAAAAAT8/dGXeu0LeuTE/s320/backbone-js-logo.png) ![Example](http://requirejs.org/i/logo.png)
 
 #Description
-A Lightweight boilerplate project based off [Marionette-Require-Boilerplate](https://github.com/brettjonesdev/Marionette-Require-Boilerplate), providing a simple Marionette application built with Require.js.  Part of the [BoilerplateMVC](https://github.com/BoilerplateMVC) suite.
+A Lightweight boilerplate project based off [Marionette-Require-Boilerplate](https://github.com/brettjonesdev/Marionette-Require-Boilerplate), providing a simple Marionette application built with Require.js and Grunt in keeping with best practices.  Part of the [BoilerplateMVC](https://github.com/BoilerplateMVC) suite.
 
 #What's different from Marionette-Require-Boilerplate?
    This project eschews the mobile/desktop dichotomy, instead providing a single application Init file, and falling back on the App.mobile flag to differentiate behavior between environments.  This makes it faster to get up and running. It also does not include jQueryUI and jQueryMobile, relying on bootstrap's responsive nature instead.  
